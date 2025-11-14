@@ -1,0 +1,16 @@
+NEW SECTION — [SectionName]
+Context: Use the Style Bible and .cursorrules. Keep tokens intact.
+
+Task:
+- Create /components/[SectionName].tsx with props for title, subtitle, cta, imageSrc.
+- Add ARIA roles/labels; mobile-first; avoid CLS.
+- Insert into /app/page.tsx under the previous section.
+
+Constraints:
+- Headline <= 6 words; body <= 30 words.
+- Contrast >= 4.5:1; spacing uses token scale; radius tokens only.
+
+Output:
+1) Short plan
+2) Unified diff for new files + page insertion
+3) QA checklist you verified (a11y, contrast, mobile)

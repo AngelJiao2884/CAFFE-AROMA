@@ -1,0 +1,13 @@
+{
+  "brand": "AROMA CAFFE",
+  "voice": { "tone": ["warm","concise","cozy"], "banned": ["revolutionize","unleash"] },
+  "tokens": {
+    "colors": { "brand1": "#0F0F0F", "brand2": "#F2EAE2", "accent1": "#E4572E", "accent2": "#2E7D6D" },
+    "type": { "heading": "[Your Serif]", "body": "[Your Sans]", "scale": [12,14,16,20,24,32,40,64] },
+    "spacing": [4,8,12,16,24,32,48,64],
+    "radius": [6,12,20],
+    "shadow": ["sm","md","lg"]
+  },
+  "accessibility": { "contrastAA": true, "minContrast": 4.5, "hitTargets": 44 },
+  "cta": "Order Ahead"
+}

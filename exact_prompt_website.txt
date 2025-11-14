@@ -1,0 +1,89 @@
+
+PROJECT: AROMA CAFFE
+
+Use the ground rules below, then scaffold and fill the site exactly as specified.
+Always: refactor/diff only; keep tokens; return **(1) short plan (2) unified diff (3) QA checklist**.
+
+##Ground rules 
+
+* Mobile-first; semantic HTML; aria-labels; keyboard nav; focus states
+* **Design tokens only** 
+* Perf: Lighthouse **mobile ≥ 90**, no CLS; use `next/image`
+* Accessibility: text/interactive **contrast ≥ 4.5:1**
+* Deliver **unified diff** for all new/changed files
+
+## Style Bible (tokens & voice)
+
+* **Colors:** `--brand-1:#0F0F0F` (espresso), `--brand-2:#F2EAE2` (cream), `--accent-1:#E4572E` (warm), `--accent-2:#2E7D6D` (matcha)
+* **Fonts:** Headings **[Serif of your choice]**, Body **[Sans of your choice]**; scale: 12/14/16/20/24/32/40/64
+* **Spacing:** 4,8,12,16,24,32,48,64 | **Radius:** 6,12,20 | **Shadows:** sm, md, lg
+* **Voice:** warm, concise, cozy; banned: “unleash”, “revolutionize”
+* **CTA:** “Order Ahead”
+
+## Content & composition (match this copy/structure)
+
+* **Top nav:** “Slow coffee, soft colors” (anchors: Brand Images, Our Menu, Contact).
+* **Hero**
+
+  * H1: “Slow coffee, soft colors.”
+  * Body: “Welcome to CAFFE AROMA — a calm corner for hand-poured brews and gentle hues. We roast light, serve simply, and let great beans speak in a quiet palette.”
+  * Buttons: “View seasonal menu” (scroll to Seasonal Feature), “Our brand” (scroll to Brand Images).
+  * Visual: hero image/placeholder with large **AROMA** typographic stamp.
+* **SeasonalFeature** (card)
+
+  * H2: “Matcha Strawberry Latte”
+  * Body: “Layers of creamy strawberry, vibrant matcha, silky crema and clinking ice — a pastel pick-me-up.”
+  * Link: “Back to menu” (scroll to Menu).
+* **Three value bullets** (under seasonal, 3 columns)
+
+  * “Thoughtful roasting” — “We source in small lots and roast to highlight florals and fruit — never bitter, always balanced.”
+  * “Minimal design” — “Pastel tones, clean lines, and a quiet, airy space. It’s coffee that feels like a deep breath.”
+  * “Sustainable sips” — “Compostable cups & milk alternatives come standard. Bring your tumbler and save.”
+* **BrandImages** (simple grid of labeled tiles)
+
+  * Tiles: Cafe Photo, Bean, Leaf, To-Go, A-Mark, CAFFE, AROMA, AROMA Stamp (use neutral placeholders).
+* **MenuGrid** (two sections + additions/milk options + seasonal highlight)
+
+  * Intro: “Slow coffee, soft colors — thoughtfully made drinks with organic ingredients and a minimalist touch.”
+  * **Classic Coffee**
+
+    * Drip Coffee — “Slow-brewed and smooth. Choose light, medium, or dark roast.” — **$3.5 / $4.5 iced**
+    * Espresso — “A bold, classic shot of our signature roast.” — **$4**
+    * Americano — “Espresso finished with hot or cold water — bright and balanced.” — **$4 / $4.5 iced**
+    * Cappuccino — “Silky foam layered over a rich espresso base.” — **$4.25**
+    * Latte — “Creamy and classic with a subtle sweetness.” — **$4.25 / $4.75 iced**
+    * Lavender Latte — “House-made lavender syrup for a calm, floral finish.” — **$6 / $6.5 iced**
+    * Mocha — “Espresso meets chocolate for a comforting classic.” — **$6.5 / $7.5 iced**
+    * Cold Brew / Nitro — “Smooth, slow-steeped coffee. Nitro for an extra creamy finish.” — **$7.5 / $8.5 nitro**
+  * **Matcha & More**
+
+    * Matcha Latte — “Ceremonial-grade matcha whisked to a soft, velvety finish.” — **$6 / $6.5 iced**
+    * Matcha Strawberry Latte (Seasonal) — “Layers of matcha and strawberry cream — pastel, vibrant, and lightly sweet.” — **$6.5 / $7 iced**
+    * Chai Latte — “Warming spices with your choice of milk.” — **$6.5 / $7 iced**
+    * Hot Chocolate — “Rich, cocoa-forward and nostalgic.” — **$5.5 / $6 iced**
+  * **Additions**: Espresso Shot +$2; Matcha Shot +$2; Protein Boost +$1; Syrups +$0.5 (Vanilla, Hazelnut, Caramel, Lavender, Maple, Wildflower Honey)
+  * **Milk Options**: Whole, Skim, Half & Half, Oat, Almond, Coconut, Macadamia, Organic Clover Sonoma
+  * **Seasonal Highlight**: “NEW Matcha Strawberry Latte — Limited pastel blend that tastes like spring.” **[Try it]** scrolls to SeasonalFeature.
+* **Contact**
+
+  * Copy: “Slide into our DMs at @CaffeAroma — we reply faster than an espresso shot. Or join our newsletter for pastel-seasonal drops.”
+  * Socials: Instagram, TikTok; Newsletter form (email field, submit).
+* **Footer**
+
+  * Copyright: “© CAFFE AROMA”
+  * Social links repeated; small print; use tokens.
+
+## Layout & rules
+
+* **Composition:** ~30–35% whitespace on hero/posters; centered hero visual; sticky CTA in header on mobile
+* **Headlines:** ≤ 6 words; buttons use CTA “Order Ahead” where relevant
+* **Contrast:** enforce ≥ 4.5:1 by adjusting token pairings only (never change token hex)
+* **Images:** use `next/image` placeholders, sizes set to avoid CLS; lazy-load non-critical sections
+
+## Output
+
+1. **Plan** (bullets)
+2. **Unified diff** for all files: project init, `tailwind.config`, global CSS, components, page assembly
+3. **QA checklist** you verified (a11y landmarks/headings/labels, contrast report, Lighthouse mobile estimate, CLS notes, keyboard tab order)
+
+

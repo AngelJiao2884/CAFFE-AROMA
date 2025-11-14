@@ -1,0 +1,31 @@
+# Cursor Rules — AROMA CAFFE
+
+GOAL
+- Build a production-ready, mobile-first marketing site for AROMA CAFFE with Next.js + Tailwind.
+- Keep brand consistency via design tokens and component patterns.
+
+DESIGN TOKENS 
+- Colors: --brand-1:#0F0F0F (bg), --brand-2:#F2EAE2 (cream), --accent-1:#E4572E (warm), --accent-2:#2E7D6D (matcha)
+- Type: Headings=“[Your Serif]”, Body=“[Your Sans]”; scale: 12/14/16/20/24/32/40/64
+- Spacing: 4,8,12,16,24,32,48,64
+- Radius: 6, 12, 20; Shadow: sm/md/lg soft
+- Contrast: text/interactive MUST meet WCAG AA (≥4.5:1)
+
+NON-NEGOTIABLES
+- Prefer **refactor** and **diff-based** edits. Do NOT rewrite whole files unless asked.
+- Keep tokens intact; if a token is missing, propose adding it vs. hardcoding values.
+- Accessibility: semantic HTML, aria-labels, focus states, keyboard nav.
+- Performance: target Lighthouse **mobile ≥90**; avoid CLS; image optimization; code-split pages/sections.
+
+COMPONENT CONVENTIONS
+- Co-locate components under /components; pages in /app
+- Tailwind utility-first; extract repeated patterns into components
+- shadcn/ui for buttons, cards, dialogs; customize tokens only
+
+DELIVERABLE FORMAT
+- Always return: (1) a concise plan (bullets), (2) unified diff, (3) a short QA checklist you verified.
+
+TESTS / QA
+- For complex logic, add unit tests (Vitest) or simple Playwright smoke.
+- Run through: a11y (aria/labels), contrast check, mobile layout (375px), Lighthouse notes.
+

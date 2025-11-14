@@ -1,0 +1,146 @@
+/* Design tokens / CSS variables */
+:root{
+  --bg:#FAF7F3;--paper:#FFFFFF;--ink:#2F2A26;--muted:#6B605B;
+  --pastel-1:#F7E7E1;--pastel-2:#E8F0F2;--pastel-3:#F1F7E9;--pastel-4:#FDF3C7;
+  --ring:#CDBEB5;--radius:14px;--shadow:0 10px 30px rgba(47,42,38,.06);--header-h:72px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:"Poppins",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji";
+  color:var(--ink);
+  background:radial-gradient(1200px 800px at 120% -20%, var(--pastel-2) 0%, transparent 50%),radial-gradient(900px 600px at -10% 110%, var(--pastel-3) 0%, transparent 55%),var(--bg);
+  line-height:1.55;padding-top:var(--header-h)
+}
+a{color:inherit;text-decoration:none}
+.container{max-width:1100px;margin:auto;padding:0 20px}
+
+header{position:fixed;top:0;left:0;right:0;backdrop-filter:saturate(140%) blur(10px);background:color-mix(in oklab, var(--bg) 90%, white);border-bottom:2px solid color-mix(in oklab, var(--ring) 30%, transparent);z-index:50;box-shadow:0 4px 20px rgba(0,0,0,0.08);width:100%}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.logo{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(from 210deg, var(--pastel-1), var(--pastel-4), var(--pastel-2), var(--pastel-3));border:1px solid color-mix(in oklab, var(--ring) 40%, transparent);box-shadow:var(--shadow)}
+.logo svg{width:20px;height:20px}
+.links{display:flex;gap:22px;font-size:14px;color:var(--muted);flex-wrap:wrap;align-items:center}
+.links a{padding:8px 10px;border-radius:999px;border:1px solid transparent}
+.links a:hover{border-color:color-mix(in oklab, var(--ring) 40%, transparent);background:white}
+.nav-btn{background:transparent;border:1px solid color-mix(in oklab, var(--ring) 30%, transparent);padding:10px 16px;border-radius:999px;font-size:14px;font-weight:500;color:var(--ink);cursor:pointer;font-family:inherit;transition:all 0.15s ease;white-space:nowrap}
+.nav-btn:hover{border-color:color-mix(in oklab, var(--ring) 50%, transparent);background:white;box-shadow:0 2px 8px rgba(0,0,0,0.08)}
+.nav-btn:active{transform:scale(0.95)}
+
+.hero{padding:20px 0 20px}
+.hero-inner{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+.tag{display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid color-mix(in oklab, var(--ring) 50%, transparent);padding:6px 10px;border-radius:999px;background:white}
+h1{font-size:clamp(36px, 6vw, 64px);line-height:1.05;margin:16px 0 14px}
+.lead{font-size:18px;color:var(--muted);max-width:46ch}
+.cta{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+.btn{border:1px solid color-mix(in oklab, var(--ring) 40%, transparent);padding:12px 18px;border-radius:999px;background:white;box-shadow:var(--shadow);font-weight:500;cursor:pointer;transition:transform .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.ghost{background:transparent}
+
+.intro{margin:34px 0 12px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:linear-gradient(180deg, white, color-mix(in oklab, white 85%, var(--bg)));border:1px solid color-mix(in oklab, var(--ring) 40%, transparent);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);min-height:140px}
+.card h3{margin:6px 0 6px;font-size:18px}
+.card p{margin:0;color:var(--muted)}
+
+.grid{margin:28px 0 70px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.tile{aspect-ratio:1/1;border-radius:var(--radius);border:1px solid color-mix(in oklab, var(--ring) 40%, transparent);display:grid;place-items:center;background:white;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.tile:nth-child(1){background:var(--pastel-1)}
+.tile:nth-child(2){background:var(--pastel-2)}
+.tile:nth-child(3){background:var(--pastel-3)}
+.tile:nth-child(4){background:var(--pastel-4)}
+.tile:nth-child(5){background:white}
+.tile:nth-child(6){background:var(--pastel-2)}
+.tile:nth-child(7){background:white}
+.tile:nth-child(8){background:var(--pastel-1)}
+.tile svg{width:54%;height:auto;filter:drop-shadow(0 6px 20px rgba(0,0,0,.08))}
+.mark{position:absolute;bottom:10px;right:14px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:color-mix(in oklab, var(--muted) 70%, #aaa)}
+
+.menu-section{scroll-margin-top:var(--header-h)}
+.menu-section .hero{padding:54px 0 26px}
+.menu-section .hero h1{font-size:clamp(32px, 6vw, 56px);line-height:1.05;margin:0 0 8px}
+.menu-section .hero p{color:var(--muted);margin:0}
+.menu-section .menu-wrap{margin:28px 0 70px;display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
+.menu-section .panel{background:linear-gradient(180deg, white, color-mix(in oklab, white 85%, var(--bg)));border:1px solid color-mix(in oklab, var(--ring) 40%, transparent);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.menu-section .panel header{position:relative;background:white;border-bottom:1px solid color-mix(in oklab, var(--ring) 35%, transparent)}
+.menu-section .panel header .title{padding:16px 20px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.menu-section .items{padding:10px 14px}
+.menu-section .row{display:flex;align-items:flex-start;gap:12px;padding:12px 8px;border-bottom:1px dashed color-mix(in oklab, var(--ring) 40%, transparent)}
+.menu-section .row:last-child{border-bottom:none}
+.menu-section .dot{width:36px;height:36px;border-radius:50%;background:var(--pastel-1);display:grid;place-items:center;border:1px solid color-mix(in oklab, var(--ring) 40%, transparent)}
+.menu-section .dot svg{width:18px;height:18px}
+.menu-section .meta{flex:1}
+.menu-section .name{font-weight:600}
+.menu-section .desc{font-size:14px;color:var(--muted);margin-top:2px}
+.menu-section .price{min-width:88px;text-align:right;font-weight:500}
+.menu-section .pill{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid color-mix(in oklab, var(--ring) 40%, transparent);background:var(--paper);color:var(--muted);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.menu-section .aside{padding:16px 18px;display:grid;gap:14px}
+.menu-section .subcard{padding:14px;border:1px solid color-mix(in oklab, var(--ring) 40%, transparent);border-radius:12px;background:white}
+.menu-section .subcard h3{margin:0 0 8px;font-size:16px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.menu-section .subrow{display:flex;justify-content:space-between;padding:6px 0;font-size:14px}
+.menu-section .tags{display:flex;gap:8px;flex-wrap:wrap}
+
+footer{padding:36px 0 60px;color:var(--muted);font-size:14px}
+.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.social{display:flex;gap:14px}
+.social a{border:1px solid color-mix(in oklab, var(--ring) 40%, transparent);padding:8px 12px;border-radius:999px;background:white}
+
+.order-section{scroll-margin-top:var(--header-h)}
+.order-wrap{margin:28px 0 70px;display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
+.order-panel{background:linear-gradient(180deg, white, color-mix(in oklab, white 85%, var(--bg)));border:1px solid color-mix(in oklab, var(--ring) 40%, transparent);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.order-panel header{background:white;border-bottom:1px solid color-mix(in oklab, var(--ring) 35%, transparent)}
+.order-panel header .title{padding:16px 20px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.order-body{padding:16px 18px;display:grid;gap:14px}
+.order-field{display:grid;gap:8px}
+.order-field label{font-size:14px;color:var(--muted)}
+.order-field select,.order-field input[type="number"],.order-field input[type="time"],.order-field input[type="text"],.order-field input[type="email"]{width:100%;padding:10px 12px;border-radius:10px;border:1px solid color-mix(in oklab, var(--ring) 40%, transparent);background:white}
+.choices{display:flex;gap:10px;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;border:1px solid color-mix(in oklab, var(--ring) 40%, transparent);background:white;font-size:14px}
+.order-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.summary{padding:16px 18px}
+.summary h3{margin:0 0 10px 0;font-size:16px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.summary-box{border:1px dashed color-mix(in oklab, var(--ring) 40%, transparent);border-radius:12px;padding:14px;background:white}
+.summary-row{display:flex;justify-content:space-between;padding:6px 0}
+.summary-nav .btn{font-size:14px;padding:10px 14px;text-transform:none;letter-spacing:normal;font-weight:400}
+.summary-nav .btn:hover{transform:translateX(2px)}
+
+@media (max-width:900px){
+  .hero-inner{grid-template-columns:1fr}
+  .intro{grid-template-columns:1fr;gap:14px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .menu-section .menu-wrap{grid-template-columns:1fr}
+  .order-wrap{grid-template-columns:1fr}
+  .links{gap:14px}
+  .cart-panel{width:100%!important;right:-100%!important}
+  .cart-panel.open{right:0!important}
+}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+:target{scroll-margin-top:var(--header-h)}
+.section{margin:20px 0 70px}
+.section h2{margin:26px 0 10px;font-size:20px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}
+.section .lead{margin:14px 0 0 0;max-width:46ch}
+
+/* Centering adjustments for specific sections */
+#matcha-strawberry{ text-align:center;display:flex;flex-direction:column;align-items:center }
+#matcha-strawberry h2{ text-align:center;margin-left:auto;margin-right:auto }
+#matcha-strawberry .card{ margin:0 auto;max-width:900px }
+#contact{ text-align:center;display:flex;flex-direction:column;align-items:center }
+#contact h2{ text-align:center;margin-left:auto;margin-right:auto }
+#contact .lead{ text-align:center;margin-left:auto;margin-right:auto }
+
+.cart-toggle{border-radius:999px;border:1px solid transparent;color:var(--muted)}
+.cart-toggle:hover{border-color:color-mix(in oklab, var(--ring) 40%, transparent);background:white}
+.cart-panel.open{right:0!important}
+.cart-item{padding:16px 0;border-bottom:1px dashed color-mix(in oklab, var(--ring) 40%, transparent);display:flex;gap:12px}
+.cart-item:last-child{border-bottom:none}
+.cart-item-info{flex:1}
+.cart-item-name{font-weight:600;margin-bottom:4px}
+.cart-item-details{font-size:13px;color:var(--muted)}
+.cart-item-price{font-weight:600;min-width:60px;text-align:right}
+.cart-item-remove{background:none;border:none;color:var(--muted);cursor:pointer;padding:4px 8px;font-size:14px}
+.cart-item-remove:hover{color:var(--ink)}
+
+
